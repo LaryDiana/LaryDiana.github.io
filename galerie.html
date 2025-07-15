@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+    <link rel="stylesheet" href="galeriestyle.css">
+    <!--Linking Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <!--Linking Google Fonts for Icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,0,0" />
+</head>
+
+<body> 
+<!--Navbar-->
+<header id="home">
+    <nav>
+    <div class="nav__bar">
+        <div class="nav__logo"><a href="#">SISSI</a></div>
+        <ul class="nav__links">
+            <li class="link"><a href="index.html">ACASĂ</a></li>
+            <li class="link"><a href="istoric.html">ISTORIC</a></li>
+            <li class="link"><a href="activitatea.html">ACTIVITATEA</a></li>
+            <li class="link"><a href="galerie.html">GALERIE</a></li>
+            <li class="link"><a href="netflix.html">FILME&SERIALE</a></li>
+            <li class="link"><a href="biografie.html">BIOGRAFIE</a></li>
+            <li class="link"><a href="bibliografie.html">BIBLIOGRAFIE</a></li>
+            <li class="link"><a href="quiz.html">QUIZ</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <div class="slider-container">
+        <!--Slider List Items-->
+        <div class="slider-wrapper swiper-wrapper">
+            <div class="slider-item swiper-slide" >
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Imaginea 1</h3>
+                    <h2 class="slide-title">Împărăteasa Elisabeta (1860)</h2>
+                    <p class="slide-description">Aceasta imagine o înfățișează pe Elisabeta de Wittelsbach, cunoscută și sub numele de Sisi (sau Sissi), împărăteasa Austriei și regina Ungariei. Este portretizată într-o rochie de catifea în stil victorian, cu o postură demnă și o expresie sobră, specifică fotografiilor formale ale aristocrației din secolul al XIX-lea. </p>
+                   
+                </div>
+            </div>
+            <div class="slider-item swiper-slide" >
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Imaginea 2</h3>
+                    <h2 class="slide-title">Împărăteasa Elisabeta în momentul încoronării ca regină a Ungariei (1867)</h2>
+                    <p class="slide-description">Această imagine evocă momentul încoronării Elisabetei ca regină a Ungariei în 1867. După semnarea compromisului austro-ungar, Elisabeta a jucat un rol important în consolidarea relației dintre cele două națiuni, fiind foarte iubită de poporul maghiar. Încoronarea sa a fost un eveniment de mare fast, iar rochia și coroana din imagine sunt probabil inspirate de ținuta oficială pe care a purtat-o atunci.
+
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="slider-item swiper-slide" >
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Imaginea 3</h3>
+                    <h2 class="slide-title">Împărăteasa Elisabeta (interpretată de Domninique Devenport) în serialul Sisi</h2>
+                    <p class="slide-description">Această imagine este o scenă oficială din serialul „Sisi”, în care Elisabeta de Austria, cunoscută sub numele de Sisi (interpretată de Dominique Devenport), este prezentată alături de soțul ei, împăratul Franz Joseph (jucat de Jannik Schümann). Atmosfera reflectă eleganța și formalitatea curții habsburgice, cu detalii care accentuează statutul lor imperial.
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="slider-item swiper-slide" >
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Imaginea 4</h3>
+                    <h2 class="slide-title">Portret al familiei imperiale habsburgice</h2>
+                    <p class="slide-description">Aceasta este o reprezentare artistică a familiei imperiale habsburgice. De la stânga la dreapta: Împărăteasa Elisabeta a Austriei, arhiducesa Maria Valeria (lângă Sisi, în picioare), împăratul Franz Joseph (în centru, așezat pe scaun), prințul moștenitor Rudolf (centru-dreapta, în picioare), arhiducesa Gisela și încă o fată (centru-jos), arhiducele Ludwig Viktor și arhiducesa Sophie. </p>
+                
+                </div>
+            </div>
+            <div class="slider-item swiper-slide" >
+                <div class="slide-content">
+                    <h3 class="slide-subtitle">Imaginea 5</h3>
+                    <h2 class="slide-title">Imagine din Palatul Imperial Hofburg, Curtea de la Viena</h2>
+                    <p class="slide-description">Această imagine este din Palatul Hofburg din Viena, Austria, mai precis din Muzeul Sisi, o secțiune dedicată împărătesei Elisabeta a Austriei. În imagini putem observa replici ale rochiilor purtate de Sisi, cea din stânga este o replică a rochiei purtate la încoronarea din 1867 în Ungaria iar cea din dreapta o rochie asemănătoare celei purtate într-un portret oficial ca și împărăteasă. </p>
+                    
+                </div>
+            </div>
+
+            <!--Slider  Pagination-->
+     <div class="slider-controls">
+        <ul class="slider-pagination">
+            <div class="slider-indicator"></div>
+            <li class="slider-tab">Împărăteasa Elisabeta (1960)</li>
+            <li class="slider-tab">Încoronarea din 1867</li>
+            <li class="slider-tab">Serialul Sissi (2021)</li>
+            <li class="slider-tab">Familia imperială habsburgică</li>
+            <li class="slider-tab">Palatul Imperial Hofburg</li>
+        </ul>
+      </div>
+
+      <!--Slider Navigations (Prev/Next)-->
+        <div class="slider-navigations">
+         <button id="slide-prev"
+         class="material-symbols-rounded"> arrow_left_alt </button>
+         <button id="slide-next"
+         class="material-symbols-rounded"> arrow_right_alt </button>
+        </div>
+        </div>
+        
+        <!--Linking Swiper SCRIPT-->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <!--Linking Custom Script-->
+      <script src="galeriescript.js"></script>
+    </div>
+</body>
+</html>
