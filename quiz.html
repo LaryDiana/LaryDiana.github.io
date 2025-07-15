@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ SISSI</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+   <main class="main" >
+    <header class="header">
+        <nav>
+        <div class="nav__bar">
+            <div class="nav__logo"><a href="index.html">SISSI</a></div>
+            <ul class="nav__links">
+                <li class="link"><a href="index.html">ACASĂ</a></li>
+                <li class="link"><a href="istoric.html">ISTORIC</a></li>
+                <li class="link"><a href="activitatea.html">ACTIVITATEA</a></li>
+                <li class="link"><a href="galerie.html">GALERIE</a></li>
+                <li class="link"><a href="netflix.html">FILME&SERIALE</a></li>
+                <li class="link"><a href="biografie.html">BIOGRAFIE</a></li>
+                <li class="link"><a href="bibliografie.html">BIBLIOGRAFIE</a></li>
+                <li class="link"><a href="quiz.html">QUIZ</a></li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="quiz-section">
+        <div class="quiz-box">
+            <h1>Sissi Quiz</h1>
+            <img id="questionImage" src="quiz/sisi1.jpg" alt="Question Image" class="quiz-image">
+            <div class="quiz-header">
+                <span>Să ne testăm cunoștințele!</span>
+                <span class="header-score">Scor 0 / 10</span>
+            </div>
+            <h2 class="question-text">1.Care era numele complet al împărătesei Sisi?</h2>
+        
+            <div class="option-list">
+                <!--<div class="option">
+                    <span>A. Maria Theresa de Habsburg</span>
+                </div>
+            <div class="option-list">
+                <div class="option">
+                    <span>B. Kathrina von Habsburg</span>
+                </div>
+            <div class="option-list">
+                <div class="option">
+                    <span>C. Elisabeta Amalia Eugenia de Wittelsbach </span>
+                </div>
+            <div class="option-list">
+                <div class="option">
+                     <span>D. Elisabeta Sophie Charlotte von Bayern</span>
+                </div>-->
+
+            </div>
+
+            <div class="quiz-footer">
+                <span class="question-total">1 of 10 Questions</span>
+                <button class="next-btn">Next</button>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <h2>Quiz Result!</h2>
+            <div class="percentage-container">
+                <div class="circular-progress">
+                    <span class="progress-value">0%</span>
+                </div>
+                <span class="score-text">Your Score 0 out of 10</span>
+            </div>
+
+            <div class="buttons">
+                <button class="tryAgain-btn">Try Again</button>
+                <button class="goHome-btn">Go to Home</button>
+            </div>
+        </div>
+    </section>
+    
+        
+    <section class="home">
+        <div class="home-content">
+            <h1>SISSI QUIZ</h1>
+            <p>Iată un quiz despre Împărăteasa Sisi (Elisabeta a Austriei), una dintre cele mai fascinante și enigmatice figuri din istorie. Testează-ți cunoștințele despre viața, personalitatea și influența sa!</p>
+            <button class="start-btn"> Start Quiz</button>
+            <audio autoplay loop>
+                <source src="quiz/emperorwaltz.mp3" type="audio/mpeg">
+                <button id="play-btn">Play / Pause</button>
+            </audio>
+        </div>
+    </section>
+    </div>
+   </main>
+   <div class="popup-info">
+    <h2>Quiz Guide</h2>
+    <span class="info">1. Timpul total alocat pentru completarea quiz-ului este de 15 minute. Asigură-te că finalizezi toate întrebările înainte de expirarea timpului.</span>
+    <span class="info">2. Quiz-ul conține 10 întrebări. Toate întrebările trebuie completate pentru a primi un scor final.</span>
+    <span class="info">3. Doar un singur răspuns este permis pentru fiecare întrebare</span>
+    <span class="info">4. Fiecare întrebare valorează 10 puncte. Totalul maxim este de 100 puncte.</span>
+    <span class="info">Îți doresc mult succes!</span>
+  
+    <div class="btn-group">
+        <button class="info-btn exit-btn">Exit Quiz</button>
+        <a href="#" class="info-btn continue-btn">Continue</a>
+    </div>
+   </div>
+   <script src="quiz.js"></script>
+   <script src="questions.js"></script>
+   <script src="melodie.js"></script>
+</body>
+</html>
