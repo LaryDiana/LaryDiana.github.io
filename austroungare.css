@@ -1,0 +1,291 @@
+/*Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*------MAIN CSS-----*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+
+/*NAVBAR*/
+:root {
+    --primary-color: #0a0d14;
+    --primary-color-light: #20242f;
+    --secondary-color: #f49e09;
+    --extra-light: rgba(255, 255, 255, 0.5);
+    --white: #ffffff;
+    --max-width: 1200;
+    --header-font: "Lisu Bosa", serif;
+
+    --white-color: #fff;
+    --dark-color: #222;
+    --body-bg-color: #fff;
+    --section-bg-color: #202834;
+    --navigation-item-hover-color: #3b5378;
+
+    --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 5px 25px rgb( 0 0 0 / 20%);
+
+    --scroll-bar-color: #fff;
+    --scroll-thumb-color: #282f4e;
+    --scroll-thumb-hover-color: #454f6b;
+
+}
+
+body{
+    background: black;
+}
+section{
+    position: relative;
+}
+.section{
+    color: var(--white-color);
+    background: var(--section-bg-color);
+    padding: 35px 200px;
+    transition: 0.3s ease;
+}
+.about h2{
+    padding-top: 20px;
+}
+.about p{
+    margin: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+} 
+
+nav {
+    background-color: black;
+    border-bottom: 1px solid var(--extra-light);
+}
+
+.nav__bar {
+    max-width:var(--max-width) ;
+    margin: auto;
+    padding: 1.5rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav__logo a{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link a{
+    padding: 1.5rem 5px;
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s;
+    text-decoration: none;
+    
+}
+
+.link a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+} 
+
+/* HOME */
+.home {
+    min-height: 100vh;
+}
+
+/*Background slider - INCEPUT*/
+.section-big {
+    z-index: 777;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+}
+.section-big img {
+    width: 100vw;  /* Ocupă 100% din lățimea ecranului */
+    height: 100vh; /* Ocupă 100% din înălțimea ecranului */
+    object-fit: cover; /* Asigură că imaginea umple spațiul fără a se deforma */
+    display: block; /* Elimină spațiile albe din jur */
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+  }
+  .section-big .text-content{
+    position: absolute;
+    top: 25%;
+    color: var(--white-color);
+    margin: 0 200px;
+    transition: 0.3s ease;
+  }
+
+  .section-big .text-content .title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: var(--text-shadow);
+    margin-bottom: 20px;
+    text-align: center;
+   
+  }
+  
+
+/*Background slider - SFARSIT*/
+
+/*----------CONTAINER-------*/
+/* Stilizare pentru containerul principal */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+/* Stilizare imagini */
+.left-image, .right-image {
+    width: 150px;
+    height: auto;
+}
+
+/* Stilizare text */
+.text-content {
+    max-width: 600px;
+    text-align: center;
+}
+/* Stilizare titluri și paragrafe */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* --------- Stilizare pentru fiecare secțiune ---------- */
+
+/* Secțiunea de politică imperială */
+.section-diplomatie {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 40px 0;
+   
+}
+
+.section-diplomatie h3 {
+    max-width: 600px;
+    word-wrap: break-word;
+    color: #f4a261; /* Portocaliu deschis */
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+    margin-bottom: 170px;
+    margin-top: 63px;
+   
+}
+
+.section-diplomatie p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+    margin-bottom: 80px;
+    
+}
+
+/* Stilizare imagini doar pentru secțiunea diplomatie */
+.section-diplomatie .left-image {
+    width: 360px;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    padding-left: 90px;
+}
+.section-diplomatie  .right-image {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    padding-right: 90px;
+}
+
+  
+.decorative-frame{
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    width: 30%;
+    max-width: 1500px;
+    z-index: 1;
+    opacity: 0.8;
+}
+/* Secțiunea despre simbolurile puterii */
+.section-consolidare {
+    background-color: #1a1a2e;
+    color: white;
+    padding: 40px 0;
+}
+
+.section-consolidare h3 {
+   text-align: center;
+   color: #f49e09;
+}
+
+.section-consolidare p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Stilizare imagini doar pentru secțiunea consolidare */
+.section-consolidare .left-image {
+    width: 360px;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    padding-left: 90px;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 80px;
+}
+.section-consolidare .right-image {
+    width: 360px;
+    position: absolute;
+    right: 0;
+    margin-right: 0;
+    padding-right: 90px;
+}
+
+/* Buton pentru revenire */
+.read-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.read-btn:hover {
+    background-color: #e76f51;
+}
