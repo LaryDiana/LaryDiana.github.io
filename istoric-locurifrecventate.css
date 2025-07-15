@@ -1,0 +1,391 @@
+ /*-----===========GOOGLE FONTS=========-------------*/
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  /*=============VARIABLES CSS======================*/
+  :root {
+    --header-height: 3.5rem;
+  
+/*=========COLORS==========*/
+/*Color mode HSL (hue, saturation, lightness)*/
+--title-color: hsl(0, 0%, 95%);
+--text-color: hsl(0, 0%, 70%);
+--text-color-light: hsl(0, 0%, 60%);
+--body-color: hsl(0, 0%, 0%);
+--container-color: hsl(0, 0%, 8%);
+--primary-color: #0a0d14;
+--primary-color-light: #20242f;
+--secondary-color: #f49e09;
+--extra-light: rgba(255, 255, 255, 0.5);
+--white: #ffffff;
+
+/*=========Font and typography===========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+--body-font:"Poppins", sans-serif;
+--second-font:"Montserrat", sans-serif;
+--biggest-font-size: 2.75rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-fon-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+
+/*========Font weight=========*/
+--font-regular: 400;
+--font-medium: 500;
+--font-semi-bold: 600;
+
+/*=========== z index ==========*/
+--z-tooltip: 10;
+--z-fixed: 100;
+  }
+
+/*======== Responsive typography ========*/
+@media screen and (min-width: 1152px) {
+    :root {
+        --biggest-font-size: 5.5rem;
+        --h1-font-size: 2.5rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875;
+        --smaller-font-size: .813;
+    }
+}
+
+/*========== Base =========*/
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('istoric/places/coperta7.jpg');
+  background-position: bottom;
+  background-size: cover;
+  /* filter: brightness(50%); /* Reduce luminozitatea la 50% */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/* Adaugă overlay DOAR pe imagine */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Strat întunecat (negru cu 50% opacitate) */
+  z-index: 1; /* Asigură că overlay-ul este între imagine și conținut */
+
+}
+.header-content {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 150px;
+  text-align: center;
+}
+.header-content h2 {
+  font-size: 50px;
+  background: linear-gradient(90deg, #696969, #dcdcdc); /* Gradient de la portocaliu la galben */
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+
+}
+.header-content h1 {
+  font-size: 100px;
+  background: linear-gradient(90deg, #696969, #dcdcdc); /* Gradient de la portocaliu la galben */
+  -webkit-background-clip: text;  
+  -webkit-text-fill-color: transparent; 
+}
+.line {
+  width: 150px;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.cta-button {
+  display: inline-block;
+  background-color: #fff8dc;
+  color: var(--white);
+  text-decoration: none;
+  padding: 15px 30px; /* Mărim padding-ul pentru un buton mai mare */
+  border-radius: 8px; /* Colțuri rotunjite */
+  font-size: 1.2rem; /* Mărim dimensiunea fontului */
+  cursor: pointer; /* Cursorul devine pointer la hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Tranziție la schimbarea culorii și transformării */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Adăugăm o umbră */
+  color: #0a0d14;
+  margin-top: 20px; /* Adaugă distanța dintre buton și titlu */
+}
+
+.cta-button:hover {
+  background-color: #fff8dc; /* Culoare de fundal la hover */
+  transform: translateY(-3px); /* Ușor la ridicare la hover */
+}
+.cta-button:active {
+  transform: translateY(1px); /* La apăsare, butonul coboară */
+}
+
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(90deg, #00008b, #00ffff);
+  }
+  50% {
+    background: linear-gradient(90deg, #ff4500, #ffeb3b); /* Portocaliu și galben */
+  }
+  100% {
+    background: linear-gradient(90deg, #00008b, #00ffff);
+  }
+}
+
+/*HOME*/
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+
+
+nav {
+  background-color: transparent;
+  border-bottom: 1px solid var(--extra-light);
+}
+
+.nav__bar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.5rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: transparent;
+}
+
+.nav__logo a{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a{
+  padding: 1.5rem 5px;
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+  text-decoration: none;
+  
+}
+
+.link a:hover {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+} 
+
+/*======= CONTENT =========*/
+.py-4{
+  padding: 4rem 0;
+}
+img{
+  width: 100%;
+  display: block;
+}
+.title-wrap{
+  text-align: center;
+  padding: 1.4rem 0;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.lg-title{
+  font-size: 1.8rem;
+}
+.sm-title{
+  display: block;
+  color:#fff8dc;
+  font-weight: 300;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.7;
+}
+.my-2{
+  margin: 2rem 0;
+}
+.shadow:hover{
+  box-shadow: 0px 0px 18px -4px rgba(109, 109, 109, 0.64);
+}
+
+/*=========== FEATURED =========*/
+.featured-row {
+  display: flex;
+  flex-wrap: wrap; /* Corectat pentru un layout mai flexibil */
+  justify-content: center;
+  gap: 20px;
+}
+.featured-item {
+  position: relative;
+  width: calc(33.333% - 20px);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+/* Corectare erori și adăugare hover pe imagini */
+.featured-item:hover {
+  transform: scale(1.05);
+}
+
+.featured-item img {
+  width: 100%; /* Face ca toate imaginile să fie la fel de late */
+  height: 300px; /* Setează o înălțime fixă pentru uniformitate */
+  object-fit: cover; /* Taie părțile care depășesc și păstrează proporțiile */
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-item:hover img {
+  transform: scale(1.05);
+}
+
+.featured-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.featured-item-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 10px;
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (max-width: 1024px) {
+  .featured-item {
+    width: calc(50% - 20px); /* Se ajustează la două coloane */
+  }
+} 
+
+@media screen and (max-width: 768px) {
+  .nav__bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .featured-item {
+    width: 100%; /* Se ajustează la o coloană pe ecrane mici */
+  }
+}
+/* Ascunde textul inițial */
+.text {
+  display: none; /* Ascunde textul pe default */
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 10px 10px 10px 30px; /* 10px sus, 10px dreapta, 10px jos, 30px stânga */
+  background: rgba(0, 0, 0, 0.5); /* Fundal semi-transparent pentru text */
+  width: 100%; /* Asigură-te că textul ocupă întreaga lățime */
+}
+
+/* Afișează textul la hover */
+.featured-item:hover .text {
+  display: block; /* Afișează textul când cursorul este deasupra imaginii */
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
